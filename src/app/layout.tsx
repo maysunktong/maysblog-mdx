@@ -26,9 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-screen">
       <body
-        className={`${openSans.variable} ${lato.variable} antialiased font-lato`}
+        className={`${openSans.variable} ${lato.variable} antialiased font-lato flex flex-col grow h-full`}
       >
         {children}
       </body>
