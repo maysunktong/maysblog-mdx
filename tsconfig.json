@@ -25,14 +25,14 @@
         "name": "next"
       }
     ],
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["*"],
-      "@/types/*": ["types/*"],
-      "@/components/*": ["components/*"],
-      "@/features/*": ["features/*"],
-      "@/lib/*": ["lib/*"],
-      "@/hooks/*": ["hooks/*"]
+      "@/*": ["src/*"],
+      "@/types/*": ["src/types/*"],
+      "@/components/*": ["src/components/*"],
+      "@/features/*": ["src/features/*"],
+      "@/lib/*": ["src/lib/*"],
+      "@/hooks/*": ["src/hooks/*"]
     }
   },
   "include": [
