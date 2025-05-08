@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems: NavItem[] = [
+  { href: "/", label: "Home" },
   { href: "/eat", label: "Eat" },
   { href: "/code", label: "Code" },
   { href: "/stay", label: "Stay" },
