@@ -25,9 +25,9 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["*"],
       "@/types/*": ["types/*"],
       "@/components/*": ["components/*"],
       "@/features/*": ["features/*"],
