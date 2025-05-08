@@ -1,6 +1,11 @@
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
-  const { default: Post } = await import(`@/content/eat/${slug}.mdx`);
 
-  return <Post />;
+  try {
+    const { default: Post } = await import(`@/content/eat/${slug}.mdx`);
+    return <Post />;
+  } catch (error) {
+    console.warn(`MDX file not found for slug: ${slug}`);
+    return null;
+  }
 }
