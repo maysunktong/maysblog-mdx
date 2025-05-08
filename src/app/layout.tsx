@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans, Lato } from "next/font/google";
 
 import "./globals.css";
+import Navbar from "../components/Navbar";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${lato.variable} antialiased font-lato flex flex-col grow h-full`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
