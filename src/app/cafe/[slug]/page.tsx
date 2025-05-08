@@ -1,3 +1,5 @@
+import BackButton from "../../../components/Buttons/BackButton";
+
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
