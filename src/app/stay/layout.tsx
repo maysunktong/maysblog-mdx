@@ -8,7 +8,7 @@ export default function BlogLayout({
 }>) {
   return (
     <div className="bg-amber-700 grow">
-      <Articles slugs={staySlugs} />
+      <Articles page="stay" slugs={staySlugs} />
       <div>{children}</div>
     </div>
   );

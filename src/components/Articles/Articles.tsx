@@ -1,10 +1,11 @@
 import Link from "next/link";
 
 type ArticleProps = {
-  slugs: SlugType[]
+  slugs: SlugType[],
+  page: string
 }
 
-const Articles = ({ slugs }: ArticleProps) => {
+const Articles = ({ page,slugs }: ArticleProps) => {
 
   return (
     <nav aria-label="Page Navigation">
@@ -12,7 +13,7 @@ const Articles = ({ slugs }: ArticleProps) => {
         {slugs.map((link) => (
           <li key={link.slug}>
             <Link
-              href={`/code/${link.slug}`}
+              href={`/${page}/${link.slug}`}
               className="capitalize text-blue-600 hover:underline"
               aria-label={`Navigate to ${link.slug} page`}
             >
