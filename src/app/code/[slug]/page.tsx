@@ -1,8 +1,9 @@
-interface Props {
-  params: { slug: string }
+interface PageProps {
+  params: { slug: string };
+  searchParams?: Record<string, string | string[]>;
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: PageProps) {
   const { slug } = params;
 
   try {
