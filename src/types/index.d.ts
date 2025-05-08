@@ -6,3 +6,7 @@ type NavItem = {
 type SlugType = {
    slug: string;
 };
+
+type ParamsProps = {
+  params: {slug: string}
+}
