@@ -1,3 +1,6 @@
+import Articles from "../../components/Articles/Articles";
+import { eatSlugs } from "../../lib/slugs";
+
 export default function BlogLayout({
   children,
 }: Readonly<{
@@ -5,6 +8,7 @@ export default function BlogLayout({
 }>) {
   return (
     <div className="bg-amber-700 grow">
+      <Articles slugs={eatSlugs} />
       <div>{children}</div>
     </div>
   );

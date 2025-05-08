@@ -3,6 +3,6 @@ type NavItem = {
   label: string
 }
 
-type PageNavProps = {
-  links: { slug: string }[];
+type SlugType = {
+   slug: string;
 };

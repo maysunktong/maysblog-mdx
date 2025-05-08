@@ -1,3 +1,6 @@
+import { cafeSlugs } from "@/lib/slugs";
+import Articles from "@/components/Articles/Articles";
+
 export default function BlogLayout({
   children,
 }: Readonly<{
@@ -5,6 +8,7 @@ export default function BlogLayout({
 }>) {
   return (
     <div className="bg-amber-700 grow">
+      <Articles slugs={cafeSlugs} />
       <div>{children}</div>
     </div>
   );

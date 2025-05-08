@@ -1,10 +1,15 @@
 import Link from "next/link";
 
-const PageNav = ({ links }: PageNavProps) => {
+type ArticleProps = {
+  slugs: SlugType[]
+}
+
+const Articles = ({ slugs }: ArticleProps) => {
+
   return (
     <nav aria-label="Page Navigation">
       <ul className="space-y-2">
-        {links.map((link) => (
+        {slugs.map((link) => (
           <li key={link.slug}>
             <Link
               href={`/code/${link.slug}`}
@@ -20,4 +25,4 @@ const PageNav = ({ links }: PageNavProps) => {
   );
 };
 
-export default PageNav;
+export default Articles;
