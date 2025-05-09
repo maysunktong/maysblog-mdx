@@ -1,9 +1,9 @@
-import { staySlugs } from "../../../lib/slugs"
+import { cafeSlugs } from "../../../lib/slugs"
 
 export default async function Page({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string[] }>
 }) {
   const { slug } = await params
   const { default: Post } = await import(`@/content/stay/${slug}.mdx`)
@@ -12,7 +12,7 @@ export default async function Page({
 }
 
 export function generateStaticParams() {
-  return  staySlugs;
+  return cafeSlugs;
 }
 
 export const dynamicParams = false
