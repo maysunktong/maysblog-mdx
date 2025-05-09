@@ -5,7 +5,7 @@ export default async function Page({
 }: {
   params: Promise<{ slug: string[] }>
 }) {
-  const { slug } = await params
+  const { slug }: {slug: string[]}  = await params
   const { default: Post } = await import(`@/content/cafe/${slug}.mdx`)
 
   return <Post />
