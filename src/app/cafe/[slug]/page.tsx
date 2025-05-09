@@ -1,4 +1,3 @@
-import { use } from 'react'
 import { cafeSlugs } from "../../../lib/slugs"
 
 export default async function Page({
@@ -6,7 +5,7 @@ export default async function Page({
 }: {
   params: Promise<{ slug: string[] }>
 }) {
-  const { slug }: { slug: string[] } = use(params)
+  const { slug } = await params
   const { default: Post } = await import(`@/content/cafe/${slug}.mdx`)
 
   return <Post />
