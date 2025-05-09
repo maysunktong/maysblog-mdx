@@ -1,4 +1,4 @@
-import { cafeSlugs } from "../../../lib/slugs"
+import { codeSlugs } from "../../../lib/slugs"
 
 export default async function Page({
   params,
@@ -12,7 +12,7 @@ export default async function Page({
 }
 
 export function generateStaticParams() {
-  return cafeSlugs;
+  return codeSlugs;
 }
 
 export const dynamicParams = false
